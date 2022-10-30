@@ -56,7 +56,10 @@ if (color === "" || quantity == 0) {
   alert("SVP, choisissez une couleur or choisissez le nombre d'article(s)");
 } else if (quantity > 100) {
   alert(" Max vous pouvez ajouter 100 d'article(s)");
-} else {
+} else if (quantity < 0) {
+  alert(" Min vous devez ajouter 1 d'article(s)"); 
+} 
+  else {
   if (productsInLS != null) {
     let searchInCart = productsInLS.filter(
       (data) => data.id === idUrl && data.color === color

@@ -114,6 +114,8 @@ async function getProductInCart() {
       prd[i].remove();
       listCart.splice(i, 1);
       localStorage.setItem("productArrayList", JSON.stringify(listCart));
+      location.reload();
+
     });
   });
 
